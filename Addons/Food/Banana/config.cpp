@@ -17,9 +17,9 @@ class CfgVehicles
         scope = 2;
         displayName = "Banana";
         descriptionShort = "A placeholder banana using the rice package.";
-        model = "\\dz\\gear\\food\\rice.p3d";
+        model = "\dz\gear\food\rice.p3d";
         hiddenSelections[] = {"camoGround"};
-        hiddenSelectionsTextures[] = {"Banana\\data\\banana_yellow_co.paa"};
+        hiddenSelectionsTextures[] = {"Banana\data\banana_yellow_co.paa"};
         class AnimEvents
         {
             class SoundEat
@@ -35,7 +35,7 @@ class CfgSoundShaders
 {
     class RandomEat_SoundShader
     {
-        samples[] = {{"Banana\\data\\random_sound",1}};
+        samples[] = {{"Banana\data\random_sound",1}};
         volume = 1.0;
     };
 };
