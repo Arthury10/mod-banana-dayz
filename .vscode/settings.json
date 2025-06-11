@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.c": "cpp",
+        "*.cpp": "cpp"
+    },
+    "editor.snippetSuggestions": "top"
+}
