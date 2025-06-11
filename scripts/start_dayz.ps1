@@ -1,17 +1,19 @@
-param(
-    [string]$GamePath = $env:DAYZ_GAME
-)
+# start_dayz.ps1
+$ErrorActionPreference = 'Stop'
 
-if (-not $GamePath -or -not (Test-Path $GamePath)) {
-    Write-Error "DayZ game directory not found. Set DAYZ_GAME environment variable or edit the script."
+$GamePath = $env:DAYZ_GAME.Trim('"') 
+
+if (-not (Test-Path -LiteralPath $GamePath)) {
+    Write-Error "❌ Caminho inválido ou não encontrado:`n$GamePath"
     exit 1
 }
 
-$exe = Join-Path $GamePath 'DayZ_x64.exe'
-if (-not (Test-Path $exe)) {
-    Write-Error "DayZ_x64.exe not found in $GamePath"
+# 2) monta o path do .bat
+$bat = Join-Path -Path $GamePath -ChildPath 'DayZCommunityOfflineMode.bat'
+
+if (-not (Test-Path -LiteralPath $bat)) {
+    Write-Error "❌ .bat não encontrado em:`n$bat"
     exit 1
 }
 
-Start-Process $exe
-
+Start-Process -FilePath $bat -WorkingDirectory $GamePath
