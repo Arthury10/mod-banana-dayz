@@ -4,7 +4,8 @@ Este repositório contém um mod simples para **DayZ** que adiciona um item de "
 
 ## Estrutura
 - **meta.cpp** e **mod.cpp**: arquivos de metadados do mod.
-- **Addons/Banana/config.cpp**: definição do novo item de comida.
+- **Addons/**: contém subdiretórios por categoria (ex.: `Food`, `Weapons`, `Clothes`, `Objects`).
+  - **Addons/Food/Banana/**: definição do item de comida e arquivos de som e textura.
 
 ## Geração do PBO
-Para utilizar o mod no jogo, é necessário compilar o diretório `Addons/Banana` em um arquivo PBO utilizando o DayZ Tools (Addon Builder).
+Para utilizar o mod no jogo, compile o diretório `Addons/Food/Banana` em um arquivo PBO utilizando o DayZ Tools (Addon Builder).
