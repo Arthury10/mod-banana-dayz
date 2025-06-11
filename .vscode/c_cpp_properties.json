@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "DayZ Modding",
+            "includePath": [
+                "${workspaceFolder}/ce_sdk"
+            ],
+            "defines": [],
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

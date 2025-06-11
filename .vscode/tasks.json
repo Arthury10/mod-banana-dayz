@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build DayZ Mods",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}\\scripts\\build_mods.ps1"
+            ],
+            "options": {
+                "env": {
+                    "DAYZ_TOOLS": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\DayZ Tools",
+                    "DAYZ_MOD_OUTPUT": "${workspaceFolder}\\@BananaMod"
+                }
+            },
+            "problemMatcher": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Validate DayZ Mods",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}\\scripts\\validate_mods.ps1"
+            ],
+            "options": {
+                "env": {
+                    "DAYZ_TOOLS": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\DayZ Tools"
+                }
+            },
+            "problemMatcher": [],
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Launch DayZ",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy", "Bypass",
+                "-File", "${workspaceFolder}\\scripts\\start_dayz.ps1"
+            ],
+            "options": {
+                "env": {
+                    "DAYZ_GAME": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\DayZ"
+                }
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}

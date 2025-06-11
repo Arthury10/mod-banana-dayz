@@ -1,0 +1,12 @@
+{
+    "DayZ Config Class": {
+        "prefix": "dayzclass",
+        "body": [
+            "class ${1:ClassName}",
+            "{",
+            "    ${0}",
+            "};"
+        ],
+        "description": "Estrutura básica de classe de config do DayZ"
+    }
+}
